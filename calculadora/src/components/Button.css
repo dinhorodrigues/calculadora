@@ -8,7 +8,26 @@
     font-size: 1.4em;
     background-color: var(--bg-button);
     border: none;
-    border-right: var()var(--border-button);
+    border-right: var(--border-button);
     border-bottom: var(--border-button);
     outline: none;
+}
+/* classes butao*/
+.button:active{
+    background-color: #ccc; /*muda cor do botao nao hora do clique*/
+
+}
+
+.button.double{
+    grid-column: span 2;
+}
+button.triple{
+    grid-column: span 3;
+}
+.button.operation{
+    background-color: #fa8231;
+    color: #FFF;
+}
+.button.operation.active{
+    background-color: #fa8231cc;
 }
