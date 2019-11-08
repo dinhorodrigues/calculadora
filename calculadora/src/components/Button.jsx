@@ -1,12 +1,19 @@
 import React from 'react';
 import './Button.css';
 
-export default props =>
-    <button  className={`
-        button
-        ${props.operation ? 'operation' : ''}
-        ${props.double ? 'double' : ''}
-        ${props.triple ? 'triple' : ''} 
-    `}> 
-    {props.label}</button>/* se operation estiver definida coloca a classe operation caso contrario coloxa vazio,  usando
-    o dolar por que ta usando javaScript*/
+export default props =>{
+    let classes = 'button '
+    classes += props.operation ? 'operation' : ''
+    classes += props.double ? 'double' : ''
+    classes += props.triple ? 'triple' : ''
+
+    return (
+        <button  
+            onClick={e =>props.click && props.click(props.label)}
+            className={classes}> 
+            {props.label}
+        </button>
+
+    )
+}
+
